@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <app-lists [terminados]="false"></app-lists>
+
+    <!-- <ion-list color="dark">
+        <ion-item *ngFor="let list of deseosService.list" detail (click)="listaSelecionada(list)">
+            <ion-label color="dark">
+                {{list.titulo}}
+            </ion-label>
+            <ion-note slot="end" color="tertiary">{{ list.items.length}} items</ion-note>
+        </ion-item>
+    </ion-list> -->
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="tertiary" (click)="addList()">
+            <ion-icon name="duplicate-outline">Delete</ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
